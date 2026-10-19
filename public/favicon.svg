@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <!-- Screen Glow Gradient -->
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+
+    <!-- Keyboard Backlight Glow -->
+    <linearGradient id="keyGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#e0f2fe" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle Container -->
+  <rect width="64" height="64" rx="16" fill="url(#bgGrad)"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="15.25" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Laptop Display Lid (Outer) -->
+  <rect x="13" y="11" width="38" height="26" rx="3.5" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+  
+  <!-- Glowing Display Screen -->
+  <rect x="15" y="13" width="34" height="22" rx="2" fill="url(#screenGrad)"/>
+
+  <!-- Screen Content: Code / Terminal Lines -->
+  <path d="M19 18 L23 21 L19 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="26" y1="21" x2="33" y2="21" stroke="#e0f2fe" stroke-width="2" stroke-linecap="round"/>
+  <line x1="19" y1="27" x2="42" y2="27" stroke="#93c5fd" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+  <line x1="19" y1="31" x2="36" y2="31" stroke="#93c5fd" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Laptop Hinge -->
+  <rect x="25" y="37" width="14" height="2" rx="0.5" fill="#0f172a"/>
+
+  <!-- Laptop Lower Deck (Base) -->
+  <path d="M7 41 L11 38 L53 38 L57 41 C57.5 42 56.5 44 54 44 L10 44 C7.5 44 6.5 42 7 41 Z" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+
+  <!-- Illuminated Keyboard / Trackpad Glow -->
+  <rect x="17" y="39.5" width="30" height="2.2" rx="1" fill="url(#keyGlow)"/>
+  
+  <!-- Trackpad Notch -->
+  <rect x="28" y="42.5" width="8" height="1" rx="0.5" fill="#64748b" opacity="0.8"/>
+</svg>

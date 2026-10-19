@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  :root, .theme-light {
+    --bg-canvas: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-subtle: #f1f5f9;
+    --text-main: #090d16;
+    --text-muted: #334155;
+    --border-subtle: #cbd5e1;
+    --accent: #2563eb;
+    --accent-bg: #eff6ff;
+    --tag-bg: #f8fafc;
+    --dot-color: #94a3b8;
+  }
+
+
+  .theme-warm {
+    --bg-canvas: #faf6f0;
+    --bg-card: #ffffff;
+    --bg-subtle: #f2ede4;
+    --text-main: #1c1917;
+    --text-muted: #44403c;
+    --border-subtle: #d6d3d1;
+    --accent: #d97706;
+    --accent-bg: #fef3c7;
+    --tag-bg: #f5f0e8;
+    --dot-color: #a8a29e;
+  }
+
+  .theme-sage {
+    --bg-canvas: #f3f7f3;
+    --bg-card: #ffffff;
+    --bg-subtle: #e6ede6;
+    --text-main: #0c1c11;
+    --text-muted: #2f3e33;
+    --border-subtle: #c2d1c2;
+    --accent: #16a34a;
+    --accent-bg: #dcfce7;
+    --tag-bg: #eaf0ea;
+    --dot-color: #718776;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--text-main);
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  ::selection {
+    background-color: #e0e7ff;
+    color: #1e1b4b;
+  }
+}
+
+/* Global Background Dotted Grid */
+.bg-dots {
+  background-image: radial-gradient(var(--dot-color) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+/* True Dual-Track Seamless Infinite Marquee */
+@keyframes marquee-track {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee-track {
+  animation: marquee-track 90s linear infinite;
+  will-change: transform;
+}
+
+.group-marquee:hover .animate-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Subtle, polished scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
