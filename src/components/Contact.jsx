@@ -35,7 +35,7 @@ export default function Contact() {
         setIsSubmitting(true);
 
         try {
-            const apiUrl = import.meta.env.DEV;
+            const apiUrl = import.meta.env.BACKEND_URL;
             const response = await fetch(`${apiUrl}/api/contact`, {
                 method: 'POST',
                 headers: {
