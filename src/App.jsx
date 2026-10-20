@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import HangingSpider from './components/HangingSpider';
 
 export default function App() {
   return (
@@ -16,6 +17,9 @@ export default function App() {
           className="fixed inset-0 pointer-events-none z-0 bg-dots opacity-[0.35] dark:opacity-[0.22]"
           aria-hidden="true"
         />
+
+        {/* Interactive Hanging Spider */}
+        <HangingSpider />
 
         {/* Content Layer */}
         <div className="relative z-10">
