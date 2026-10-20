@@ -35,7 +35,7 @@ export default function Contact() {
         setIsSubmitting(true);
 
         try {
-            const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+            const apiUrl = import.meta.env.DEV;
             const response = await fetch(`${apiUrl}/api/contact`, {
                 method: 'POST',
                 headers: {
