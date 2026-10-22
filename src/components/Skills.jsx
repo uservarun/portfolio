@@ -74,6 +74,9 @@ export default function Skills() {
                 <img
                   src={item.icon}
                   alt={item.name}
+                  width="56"
+                  height="56"
+                  decoding="async"
                   className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl shadow-md transition-all duration-300 group-hover:shadow-2xl"
                   loading="lazy"
                 />
@@ -92,6 +95,9 @@ export default function Skills() {
                 <img
                   src={item.icon}
                   alt={item.name}
+                  width="56"
+                  height="56"
+                  decoding="async"
                   className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl shadow-md transition-all duration-300 group-hover:shadow-2xl"
                   loading="lazy"
                 />

@@ -187,7 +187,11 @@ export default function Hero() {
               <div className="relative aspect-[4/4.5] w-full rounded-2xl overflow-hidden shadow-inner">
                 <img
                   src={personalInfo.profileImage || "/profile.jpg"}
-                  alt={personalInfo.name}
+                  alt={`${personalInfo.name} - Full-Stack Developer`}
+                  width="400"
+                  height="450"
+                  fetchPriority="high"
+                  decoding="async"
                   className="w-full h-full object-cover object-top transition-transform duration-500 hover:scale-[1.02]"
                 />
               </div>

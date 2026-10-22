@@ -143,6 +143,11 @@ export default function HangingSpider() {
   const fixedX = 60;
 
   useEffect(() => {
+    // Disable 60FPS loop on mobile or when user prefers reduced motion to prevent CPU/battery drain
+    if (typeof window !== 'undefined' && (window.innerWidth < 640 || window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      return;
+    }
+
     let animId;
 
     const handleScroll = () => {
@@ -242,7 +247,7 @@ export default function HangingSpider() {
 
   return (
     <aside
-      className="fixed top-0 right-8 sm:right-14 w-[120px] h-screen pointer-events-none z-[100] select-none overflow-visible"
+      className="hidden sm:block fixed top-0 right-8 sm:right-14 w-[120px] h-screen pointer-events-none z-[100] select-none overflow-visible"
       aria-label="Interactive Spider Easter Egg"
     >
       {/* 1. DYNAMIC SILK THREAD (Vibrates and ripples with walking steps) */}

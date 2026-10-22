@@ -49,6 +49,10 @@ export default function WorkspaceSection() {
                 <img
                   src="/workspace.jpg"
                   alt="Engineering Workstation & Deep Focus Setup"
+                  width="600"
+                  height="450"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
                 />
                 

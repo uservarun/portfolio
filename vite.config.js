@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-    envPrefix: ['BACKEND_'],
+    envPrefix: ['VITE_', 'BACKEND_'],
 })
