@@ -1,5 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from './context/ThemeContext';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
@@ -32,6 +33,7 @@ export default function App() {
           </main>
           <Footer />
         </div>
+        <Analytics />
       </div>
     </ThemeProvider>
   );
